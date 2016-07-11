@@ -1,0 +1,15 @@
+﻿version: '2'
+services:
+  web:
+    build: .
+    ports:
+     - "5000:5000"
+    depends_on:
+     - postgres
+
+  postgres:
+    environment:
+     - POSTGRES_PASSWORD=password
+    image: postgres
+    ports:
+     - "5400:5432"

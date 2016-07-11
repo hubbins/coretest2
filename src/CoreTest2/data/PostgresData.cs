@@ -20,6 +20,7 @@ namespace CoreTest2.data
             builder.AddJsonFile("appsettings.json").Build();
             var connectionStringConfig = builder.Build();
             connectionString = connectionStringConfig.GetConnectionString("DefaultConnection");
+            Console.WriteLine("Connection string: " + connectionString);
         }
 
         public static List<Post> getPosts()
